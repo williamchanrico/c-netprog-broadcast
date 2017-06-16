@@ -8,7 +8,7 @@ Broadcast network programming example in C
 ### Broadcast
 ```
 $ gcc broadcast-ipv4.c -o broadcast
-# ./broadcast
+$ ./broadcast
 usage: ./broadcast <bcast_addr> <bcast_port>
 ```
 ### Listener
