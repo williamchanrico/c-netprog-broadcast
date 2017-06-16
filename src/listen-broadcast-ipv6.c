@@ -15,7 +15,6 @@
 
 int main(int argc, char **argv){
 	int sockfd;
-	int allow_bcast = 1;
 	struct sockaddr_in6 addr;
 
 	if(argc != 2){
@@ -25,11 +24,6 @@ int main(int argc, char **argv){
 
 	if( (sockfd = socket(AF_INET6, SOCK_DGRAM, 0)) < 0){
 		perror("socket");
-		exit(EXIT_FAILURE);
-	}
-
-	if(setsockopt(sockfd, SOL_SOCKET, SO_BROADCAST, &allow_bcast, sizeof(allow_bcast)) == -1){
-		perror("setsockopt");
 		exit(EXIT_FAILURE);
 	}
 

@@ -15,7 +15,6 @@
 
 int main(int argc, char **argv){
 	int sockfd;
-	int allow_bcast = 1;
 	struct sockaddr_in addr;
 
 	if(argc != 2){
